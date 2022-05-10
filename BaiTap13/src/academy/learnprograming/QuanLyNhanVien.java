@@ -27,7 +27,7 @@ public class QuanLyNhanVien {
 
 
     public void suaThongTin(String id, int loaiThongTin, String thongTinCanSua) {
-        Employee employee = listNhanVien.stream().filter(o -> o.getId().equals(id)).findFirst().//("null");
+        Employee employee = listNhanVien.stream().filter(o -> o.getId().equals(id)).findFirst().orElse(null);
 
         if (employee != null) {
             switch (loaiThongTin) {
